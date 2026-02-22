@@ -1,0 +1,76 @@
+/* Reset básico */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden; /* Impede scroll no shell, o scroll será no iframe */
+}
+
+.shell-wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar à Esquerda */
+.sidebar {
+  width: 260px;
+  background-color: #1a1a2e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar h2 { margin-bottom: 30px; font-size: 1.5rem; color: #4ecca3; }
+
+.sidebar nav ul { list-style: none; }
+
+.sidebar button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: transparent;
+  border: 1px solid #4ecca3;
+  color: white;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.sidebar button:hover { background: #4ecca3; color: #1a1a2e; }
+
+/* Conteúdo à Direita */
+.main-content {
+  flex-grow: 1; /* Ocupa todo o espaço restante */
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f9;
+}
+
+.top-bar {
+  height: 60px;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+#iframe-container {
+  flex-grow: 1;
+  position: relative;
+}
+
+/* Faz o Iframe preencher 100% da área disponível */
+#mfe-viewport {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}

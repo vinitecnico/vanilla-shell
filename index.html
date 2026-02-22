@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Micro-Frontend Shell</title>
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <div class="shell-wrapper">
+    
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>ERP System</h2>
+      </div>
+      <nav>
+        <div class="nav-section">
+          <small>MÓDULO CLIENTES (Angular)</small>
+          <ul>
+            <li><button onclick="navigate('/cliente')">Listar Clientes</button></li>
+            <li><button onclick="navigate('/cliente/create')">Novo Cliente</button></li>
+          </ul>
+        </div>
+
+        <div class="nav-section">
+          <small>MÓDULO PRODUTOS (React)</small>
+          <ul>
+            <li><button onclick="navigate('/produto')">Listar Produtos</button></li>
+            <li><button onclick="navigate('/produto/create')">Novo Produto</button></li>
+          </ul>
+        </div>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <div class="route-info">
+          Caminho Atual: <strong id="route-path">/</strong>
+        </div>
+        <div class="user-info">
+          <span>Olá, <strong>Dev Sênior</strong></span>
+        </div>
+      </header>
+
+      <section id="iframe-container">
+        </section>
+    </main>
+
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
