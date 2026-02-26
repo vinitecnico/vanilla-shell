@@ -32,3 +32,37 @@
     }
   }
 }
+
+
+---------------
+
+{
+  "projects": {
+    "mfe-release": {
+      "architect": {
+        "build": {
+          "options": {
+            "outputPath": "dist/mfe-release",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "styles": [
+              "node_modules/@ids/angular/scss/styles.scss",
+              "src/styles.scss"
+            ]
+          },
+          "configurations": {
+            "development": {
+              "deployUrl": "http://localhost:4201/"
+            },
+            "homolog": {
+              "deployUrl": "https://hom-mfe.meusistema.com/"
+            },
+            "production": {
+              "deployUrl": "https://mfe.meusistema.com/"
+            }
+          }
+        }
+      }
+    }
+  }
+}
